@@ -1,5 +1,5 @@
 VERSION=1.4.0
-DATE=`date +'%y.%m.%d'`
+DATE=`date +'%Y.%m.%d'`
 BOOTSTRAP = ./bootstrap.css
 BOOTSTRAP_MIN = ./bootstrap.min.css
 BOOTSTRAP_LESS = ./lib/bootstrap.less
@@ -13,7 +13,7 @@ build:
 		lessc ${BOOTSTRAP_LESS}.tmp > ${BOOTSTRAP}; \
 		lessc ${BOOTSTRAP_LESS}.tmp > ${BOOTSTRAP_MIN} --compress; \
 		rm -f ${BOOTSTRAP_LESS}.tmp; \
-		echo "Bootstrap successfully built! - `date`"; \
+		echo "Bootstrap successfully built! - `date +'%Y-%m-%d %H:%M:%S'`"; \
 	else \
 		echo "You must have the LESS compiler installed in order to build Bootstrap."; \
 		echo "You can install it by running: npm install less -g"; \
